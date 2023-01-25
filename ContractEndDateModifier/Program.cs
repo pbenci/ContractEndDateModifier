@@ -22,6 +22,9 @@ namespace ContractEndDateModifier
                     var RentalsDetailsPage = new RentalsDetailsPage(Driver, Contract.ContractRowId);
                     RentalsDetailsPage.GoTo();
                     RentalsDetailsPage.OpenEditContractMode();
+                    Thread.Sleep(5000);
+                    RentalsDetailsPage.EditDate();
+                    Thread.Sleep(5000);
                     //TODO EDIT DATE 1 DAY FORWARD AND SAVE CONTRACT MODIFICATION
                     //TODO EDIT DATE 1 DAY BACK AND SAVE CONTRACT MODIFICATION
                     Driver.Quit();
