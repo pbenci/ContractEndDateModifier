@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
-namespace InsuranceAdjuster
+namespace ContractEndDateModifier
 {
     public class Waits
     {

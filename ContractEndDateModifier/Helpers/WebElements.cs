@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Drawing;
 
-namespace InsuranceAdjuster
+namespace ContractEndDateModifier
 {
     public class WebElements : IWebElement
     {

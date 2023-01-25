@@ -1,6 +1,6 @@
 ﻿using Microsoft.Office.Interop.Excel;
 
-namespace InsuranceAdjuster
+namespace ContractEndDateModifier
 {
     public static class Excel
     {

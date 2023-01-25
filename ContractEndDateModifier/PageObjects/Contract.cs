@@ -1,4 +1,4 @@
-﻿namespace InsuranceAdjuster
+﻿namespace ContractEndDateModifier
 {
     public class Contracts
     {

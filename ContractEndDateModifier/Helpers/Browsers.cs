@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using System.Configuration;
 using System.Reflection;
 
-namespace InsuranceAdjuster
+namespace ContractEndDateModifier
 {
     public class Browsers
     {

@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace InsuranceAdjuster
+namespace ContractEndDateModifier
 {
     public class RentalsPage : BackendMenu
     {

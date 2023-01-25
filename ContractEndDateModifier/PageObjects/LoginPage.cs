@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System.Configuration;
 
-namespace InsuranceAdjuster
+namespace ContractEndDateModifier
 {
     public class LoginPage : BackendMenu
     {
