@@ -33,7 +33,6 @@ namespace ContractEndDateModifier
         public void EditDate()
         {
             ((IJavaScriptExecutor)Driver).ExecuteScript($"document.querySelector(\"div[data-contract-row-id='{ContractRowId}'] [id$=date_to_rent]\").value = \"01/02/2023\";");
-            Thread.Sleep(1000);
             Interaction.Click(CalendarIcons[1]);
         }
     }
