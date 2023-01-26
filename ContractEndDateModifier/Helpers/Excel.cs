@@ -19,7 +19,8 @@ namespace ContractEndDateModifier
                 Contracts Contract = new(
                     Convert.ToString(ws.Cells[i, 1].Value),
                     Convert.ToString(ws.Cells[i, 2].Value),
-                    Convert.ToString(ws.Cells[i, 3].Value)
+                    Convert.ToString(ws.Cells[i, 3].Value),
+                    Convert.ToString(ws.Cells[i, 4].Value)
                     );
             ContractsList.Add(Contract);
             }

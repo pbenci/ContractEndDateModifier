@@ -24,7 +24,9 @@ namespace ContractEndDateModifier
                     RentalsDetailsPage.OpenEditContractMode();
                     RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
                     RentalsDetailsPage.ConfirmContractModification();
-                    //TODO EDIT DATE 1 DAY BACK AND SAVE CONTRACT MODIFICATION
+                    RentalsDetailsPage.OpenEditContractMode();
+                    RentalsDetailsPage.EditEndDate(Contract.PreviousEndDate);
+                    RentalsDetailsPage.ConfirmContractModification();
                     Driver.Quit();
                 }
                 catch (Exception)
