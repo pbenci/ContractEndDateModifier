@@ -10,14 +10,12 @@ namespace ContractEndDateModifier
         private IWebElement SaveContractModificationButton => Driver.FindElement(By.CssSelector("div.contract-accordion-header.pl-5 > a"));
         private IWebElement ConfirmContractModificationButton => Driver.FindElement(By.CssSelector("div.px-4.pb-4.modal-footer-button > div > div > div > div > button"));
         public string ContractRowId { get; set; }
-        public string NewEndDate { get; set; }
 
-        public RentalsDetailsPage(IWebDriver Driver, string ContractRowId, string NewEndDate) : base(Driver)
+        public RentalsDetailsPage(IWebDriver Driver, string ContractRowId) : base(Driver)
         {
             this.Driver = Driver;
             Wait = new(Driver);
             this.ContractRowId = ContractRowId;
-            this.NewEndDate = NewEndDate;
         }
 
         public void GoTo()
@@ -33,7 +31,7 @@ namespace ContractEndDateModifier
             WaitForOverlayToDisappear();
         }
         
-        public void EditEndDate()
+        public void EditEndDate(string NewEndDate)
         {
             ((IJavaScriptExecutor)Driver).ExecuteScript($"document.querySelector(\"div[data-contract-row-id='{ContractRowId}'] [id$=date_to_rent]\").value = '{NewEndDate}';");
             Interaction.Click(CalendarIcons[1]);

@@ -19,10 +19,10 @@ namespace ContractEndDateModifier
                     var RentalsPage = new RentalsPage(Driver);
                     RentalsPage.GoTo();
                     RentalsPage.SearchContractByCode(Contract.Code);
-                    var RentalsDetailsPage = new RentalsDetailsPage(Driver, Contract.ContractRowId, Contract.NewEndDate);
+                    var RentalsDetailsPage = new RentalsDetailsPage(Driver, Contract.ContractRowId);
                     RentalsDetailsPage.GoTo();
                     RentalsDetailsPage.OpenEditContractMode();
-                    RentalsDetailsPage.EditEndDate();
+                    RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
                     RentalsDetailsPage.ConfirmContractModification();
                     //TODO EDIT DATE 1 DAY BACK AND SAVE CONTRACT MODIFICATION
                     Driver.Quit();
