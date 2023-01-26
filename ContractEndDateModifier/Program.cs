@@ -23,7 +23,7 @@ namespace ContractEndDateModifier
                     RentalsDetailsPage.GoTo();
                     RentalsDetailsPage.OpenEditContractMode();
                     RentalsDetailsPage.EditEndDate();
-                    //TODO EDIT DATE 1 DAY FORWARD AND SAVE CONTRACT MODIFICATION
+                    RentalsDetailsPage.ConfirmContractModification();
                     //TODO EDIT DATE 1 DAY BACK AND SAVE CONTRACT MODIFICATION
                     Driver.Quit();
                 }
