@@ -38,6 +38,13 @@ namespace ContractEndDateModifier
             WaitForOverlayToDisappear();
         }
 
+        public void EditStartDate(string NewStartDate)
+        {
+            ((IJavaScriptExecutor)Driver).ExecuteScript($"document.querySelector(\"div[data-contract-row-id='{ContractRowId}'] [id$=date_from_rent]\").value = '{NewStartDate}';");
+            Interaction.Click(CalendarIcons[0]);
+            WaitForOverlayToDisappear();
+        }
+
         public void ConfirmContractModification()
         {
             Interaction.Click(SaveContractModificationButton);
