@@ -7,7 +7,7 @@ namespace ContractEndDateModifier
     {
         static void Main(string[] args)
         {
-            Parallel.ForEach(Excel.GetNumberOfUsedRows(), new ParallelOptions { MaxDegreeOfParallelism = int.Parse(ConfigurationManager.AppSettings.Get("ParallelisationLevel")) }, Contract =>
+             Parallel.ForEach(Excel.GetNumberOfUsedRows(), new ParallelOptions { MaxDegreeOfParallelism = int.Parse(ConfigurationManager.AppSettings.Get("ParallelisationLevel")) }, Contract =>
             {
                 IWebDriver Driver = new Browsers().LaunchChrome();
                 Driver.Manage().Window.Maximize();
@@ -22,13 +22,11 @@ namespace ContractEndDateModifier
                     var RentalsDetailsPage = new RentalsDetailsPage(Driver, Contract.ContractRowId);
                     RentalsDetailsPage.GoTo();
                     RentalsDetailsPage.OpenEditContractMode();
-                    RentalsDetailsPage.EditStartDate(Contract.NewEndDate);
+                    RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
                     RentalsDetailsPage.ConfirmContractModification();
-                    //RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
-                    //RentalsDetailsPage.ConfirmContractModification();
-                    //RentalsDetailsPage.OpenEditContractMode();
-                    //RentalsDetailsPage.EditEndDate(Contract.PreviousEndDate);
-                    //RentalsDetailsPage.ConfirmContractModification();
+                    RentalsDetailsPage.OpenEditContractMode();
+                    RentalsDetailsPage.EditEndDate(Contract.PreviousEndDate);
+                    RentalsDetailsPage.ConfirmContractModification();
                     Driver.Quit();
                 }
                 catch (Exception)
