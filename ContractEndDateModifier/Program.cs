@@ -24,11 +24,11 @@ namespace ContractEndDateModifier
                     RentalsDetailsPage.OpenEditContractMode();
                     RentalsDetailsPage.EditStartDate(Contract.NewEndDate);
                     RentalsDetailsPage.ConfirmContractModification();
-                    //RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
-                    //RentalsDetailsPage.ConfirmContractModification();
-                    //RentalsDetailsPage.OpenEditContractMode();
-                    //RentalsDetailsPage.EditEndDate(Contract.PreviousEndDate);
-                    //RentalsDetailsPage.ConfirmContractModification();
+                    RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
+                    RentalsDetailsPage.ConfirmContractModification();
+                    RentalsDetailsPage.OpenEditContractMode();
+                    RentalsDetailsPage.EditEndDate(Contract.PreviousEndDate);
+                    RentalsDetailsPage.ConfirmContractModification();
                     Driver.Quit();
                 }
                 catch (Exception)
