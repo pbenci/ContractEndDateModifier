@@ -22,8 +22,6 @@ namespace ContractEndDateModifier
                     var RentalsDetailsPage = new RentalsDetailsPage(Driver, Contract.ContractRowId);
                     RentalsDetailsPage.GoTo();
                     RentalsDetailsPage.OpenEditContractMode();
-                    RentalsDetailsPage.EditStartDate(Contract.NewEndDate);
-                    RentalsDetailsPage.ConfirmContractModification();
                     RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
                     RentalsDetailsPage.ConfirmContractModification();
                     RentalsDetailsPage.OpenEditContractMode();
