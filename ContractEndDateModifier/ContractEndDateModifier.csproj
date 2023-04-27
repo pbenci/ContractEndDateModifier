@@ -21,8 +21,8 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
-    <PackageReference Include="Selenium.Support" Version="4.8.1" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="111.0.5563.6400" />
+    <PackageReference Include="Selenium.Support" Version="4.9.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="112.0.5615.4900" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
   </ItemGroup>
 
