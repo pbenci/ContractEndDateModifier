@@ -19,7 +19,7 @@ namespace ContractEndDateModifier
                     var RentalsPage = new RentalsPage(Driver);
                     RentalsPage.GoTo();
                     RentalsPage.SearchContractByCode(Contract.Code);
-                    var RentalsDetailsPage = new RentalsDetailsPage(Driver, Contract.ContractRowId);
+                    var RentalsDetailsPage = new RentalsDetailsPage(Driver, Contract.RowId);
                     RentalsDetailsPage.GoTo();
                     RentalsDetailsPage.OpenEditContractMode();
                     RentalsDetailsPage.EditEndDate(Contract.NewEndDate);
@@ -32,7 +32,7 @@ namespace ContractEndDateModifier
                 catch (Exception)
                 {
                     Driver.Quit();
-                    Results.Log($"Couldn't modify the row {Contract.ContractRowId} in contract {Contract.Code}");
+                    Results.Log($"Couldn't modify the row {Contract.RowId} in contract {Contract.Code}");
                 }
             });
         }

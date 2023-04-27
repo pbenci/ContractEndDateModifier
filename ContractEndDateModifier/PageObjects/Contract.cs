@@ -3,15 +3,15 @@
     public class Contracts
     {
         public string Code { get; private set; }
-        public string ContractRowId { get; private set; }
+        public string RowId { get; private set; }
         public string NewEndDate { get; private set; }
         public string PreviousEndDate { get; private set; }
 
 
-        public Contracts(string Code, string ContractRowId, string NewEndDate, string PreviousEndDate)
+        public Contracts(string Code, string RowId, string NewEndDate, string PreviousEndDate)
         {
             this.Code = Code;
-            this.ContractRowId = ContractRowId;
+            this.RowId = RowId;
             this.NewEndDate = NewEndDate;
             this.PreviousEndDate = PreviousEndDate;
         }
