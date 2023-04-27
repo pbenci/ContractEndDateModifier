@@ -32,7 +32,7 @@ namespace ContractEndDateModifier
                 catch (Exception)
                 {
                     Driver.Quit();
-                    Results.Log($"Couldn't modify a row in contract {Contract.Code}");
+                    Results.Log($"Couldn't modify the row {Contract.ContractRowId} in contract {Contract.Code}");
                 }
             });
         }
