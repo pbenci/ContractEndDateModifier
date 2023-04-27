@@ -42,7 +42,7 @@ namespace ContractEndDateModifier
                     Results.Log($"Rows left to modify {TotalNumberOfRowsToModify - NumberOfRowsAlreadyModified}");
                 }
             });
-            Results.Log($"Started ended");
+            Results.Log($"Process ended");
         }
     }
 }
