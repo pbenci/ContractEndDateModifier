@@ -6,7 +6,7 @@ namespace ContractEndDateModifier
     {
         public static Application ExcelApp = new Application();
 
-        public static IList<Contracts> GetNumberOfUsedRows()
+        public static IList<Contracts> RowsToModify()
         {
             string FilePath = AppDomain.CurrentDomain.BaseDirectory + @"\Contracts.xlsx";
             Workbook wb = ExcelApp.Workbooks.Open(FilePath);
